@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v2.12.12
+      - uses: akhileshns/heroku-deploy@master
         with:
           branch: "main"
           heroku_api_name: ${{secrets.HEROKU_API_KEY}}
