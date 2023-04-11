@@ -1,0 +1,17 @@
+name: Deploy
+on:
+  push:
+   branch:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v2.12.12
+        with:
+          branch: "main"
+          heroku_api_name: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "social-media-auth-node"
+          heroku_email: "tharindut520@gmail.com"
